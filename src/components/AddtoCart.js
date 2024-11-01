@@ -19,10 +19,11 @@ const AddtoCart = ({ onClose }) => {
               in faucibus.
             </div>
           </div>
+          
           <button
             className="select-none border-none outline-none text-white uppercase font-bold text-xs py-3 px-6 bg-[#ff6347] rounded-md w-11/12 shadow-lg hover:bg-[#E5533D] transition duration-300"
           >
-            Buy now
+            <a href="/">Buy now</a>
           </button>
         </div>
       </div>

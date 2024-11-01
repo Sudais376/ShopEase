@@ -2,6 +2,16 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 
 const HomeHero = () => {
+
+   // Function to handle scrolling to target divs
+   const scrollToCategory = (categoryId) => {
+    const element = document.getElementById(categoryId);
+    if (element) {
+      const offset = -400; // Adjust this value as needed
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset + offset;
+      window.scrollTo({ top: elementPosition, behavior: "smooth" });
+    }
+  };
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
@@ -39,8 +49,8 @@ const HomeHero = () => {
                 data-aos="fade-up"
                 className="flex justify-center items-center "
               >
-                <button className="font-bold text-white px-6 py-2 rounded-md bg-[#ff6347] hover:bg-[#E5533D] transition duration-500 ">
-                  Discover Collection
+                <button onClick={() => scrollToCategory("Sales")} className="font-bold text-white px-6 py-2 rounded-md bg-[#ff6347] hover:bg-[#E5533D] transition duration-500 ">
+                  Exclosive Sales
                 </button>
               </div>
             </div>

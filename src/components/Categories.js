@@ -14,6 +14,16 @@ const Categories = () => {
     setCartOpen(false);
   };
 
+    // Function to handle scrolling to target divs
+    const scrollToCategory = (categoryId) => {
+      const element = document.getElementById(categoryId);
+      if (element) {
+        const offset = -400; // Adjust this value as needed
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset + offset;
+        window.scrollTo({ top: elementPosition, behavior: "smooth" });
+      }
+    };
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
@@ -64,7 +74,7 @@ const Categories = () => {
                   <p className=" text-center text-xl py-2 font-bold">
                     Athletic shoes
                   </p>
-                  <button className="font-bold w-full text-white px-6 py-2 rounded-md bg-[#ff6347] hover:bg-[#E5533D] transition duration-500">
+                  <button onClick={() => scrollToCategory("Athletic")} className="font-bold w-full text-white px-6 py-2 rounded-md bg-[#ff6347] hover:bg-[#E5533D] transition duration-500">
                     Browse Collection
                   </button>
                 </div>
@@ -78,7 +88,7 @@ const Categories = () => {
                   <p className=" text-center text-xl py-2 font-bold">
                     Casual Sneakers
                   </p>
-                  <button className="font-bold w-full text-white px-6 py-2 rounded-md bg-[#ff6347] hover:bg-[#E5533D] transition duration-500">
+                  <button onClick={() => scrollToCategory("Casual")} className="font-bold w-full text-white px-6 py-2 rounded-md bg-[#ff6347] hover:bg-[#E5533D] transition duration-500">
                     Browse Collection
                   </button>
                 </div>
@@ -96,7 +106,7 @@ const Categories = () => {
                   <p className=" text-center text-xl py-2 font-bold">
                     Formal & dress Shoes
                   </p>
-                  <button className="font-bold w-full text-white px-6 py-2 rounded-md bg-[#ff6347] hover:bg-[#E5533D] transition duration-500">
+                  <button onClick={() => scrollToCategory("Formal")} className="font-bold w-full text-white px-6 py-2 rounded-md bg-[#ff6347] hover:bg-[#E5533D] transition duration-500">
                     Browse Collection
                   </button>
                 </div>
@@ -110,7 +120,7 @@ const Categories = () => {
                   <p className=" text-center text-xl py-2 font-bold">
                     Seasonal & Specialty Shoes
                   </p>
-                  <button className="font-bold w-full text-white px-6 py-2 rounded-md bg-[#ff6347] hover:bg-[#E5533D] transition duration-500">
+                  <button onClick={() => scrollToCategory("Seasonal")} className="font-bold w-full text-white px-6 py-2 rounded-md bg-[#ff6347] hover:bg-[#E5533D] transition duration-500">
                     Browse Collection
                   </button>
                 </div>
@@ -147,7 +157,7 @@ const Categories = () => {
 
         <div data-aos ='fade-up' className=" py-12 ">
           <div data-aos ='fade-up' className="max-w-[800px] mx-auto px-6 ">
-            <h3 data-aos ='fade-up' className="font-bold text-center text-xl md:text-3xl  ">
+            <h3 id="Athletic" data-aos ='fade-up' className="font-bold text-center text-xl md:text-3xl  ">
               Athletic Shoes
             </h3>
             <p data-aos ='fade-up' className="text-[16px] text-center px-2 py-2  ">
@@ -158,13 +168,16 @@ const Categories = () => {
             </p>
           </div>
           <div data-aos ='fade-up' className="flex flex-wrap justify-center items-center gap-8 py-12">
-            <div data-aos ='fade-up' className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
-              <img data-aos ='fade-up'
+            
+            <div data-aos ="fade-up">
+            <div className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
+              <div data-aos ="fade-up">
+              <img
                 className="h-[250px] object-cover rounded-md hover:scale-105 transition duration-500"
                 src="/assets/runningshoe.png"
                 width={250}
                 alt="Running Shoes"
-              />
+              /></div>
               <p data-aos ='fade-up' className=" text-center text-lg py-2 font-bold">
                 Running shoes
               </p>
@@ -174,13 +187,16 @@ const Categories = () => {
                 </button>
               </div>
             </div>
-            <div data-aos ='fade-up' className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
-              <img data-aos ='fade-up'
+            </div>
+            <div data-aos ="fade-up">
+            <div className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
+              <div data-aos ="fade-up">
+              <img
                 className="h-[250px] object-cover rounded-md hover:scale-105 transition duration-500"
                 src="/assets/trainingshoe.png"
                 width={250}
                 alt="Training Shoes"
-              />
+              /></div>
               <p data-aos ='fade-up' className=" text-center text-lg py-2 font-bold">
                 Training Shoes
               </p>
@@ -190,13 +206,16 @@ const Categories = () => {
                 </button>
               </div>
             </div>
-            <div data-aos ='fade-up' className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
-              <img data-aos ='fade-up'
+            </div>
+            <div data-aos ="fade-up">
+            <div className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
+              <div data-aos ="fade-up">
+              <img
                 className="h-[250px] object-cover rounded-md hover:scale-105 transition duration-500"
                 src="/assets/soccercleats.png"
                 width={250}
                 alt="Soccer Cleats"
-              />
+              /></div>
               <p data-aos ='fade-up' className=" text-center text-lg py-2 font-bold">
                 Soccer Cleats
               </p>
@@ -206,13 +225,16 @@ const Categories = () => {
                 </button>
               </div>
             </div>
-            <div data-aos ='fade-up' className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
-              <img data-aos ='fade-up'
+            </div>
+            <div data-aos ="fade-up">
+            <div className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
+              <div data-aos ="fade-up">
+              <img
                 className="h-[250px] object-cover rounded-md hover:scale-105 transition duration-500"
                 src="/assets/basketballshoe.png"
                 width={250}
                 alt="Basketball Shoes"
-              />
+              /></div>
               <p data-aos ='fade-up' className=" text-center text-lg py-2 font-bold">
                 Basketball Shoes
               </p>
@@ -222,6 +244,7 @@ const Categories = () => {
                 </button>
               </div>
             </div>
+            </div>
           </div>
         </div>
 
@@ -229,7 +252,7 @@ const Categories = () => {
 
         <div data-aos ='fade-up' className=" py-12 ">
           <div data-aos ='fade-up' className="max-w-[800px] mx-auto px-6 ">
-            <h3 data-aos ='fade-up' className="font-bold text-center text-xl md:text-3xl  ">
+            <h3 id="Casual" data-aos ='fade-up' className="font-bold text-center text-xl md:text-3xl  ">
               Casual Sneakers
             </h3>
             <p data-aos ='fade-up' className="text-[16px] text-center px-2 py-2  ">
@@ -237,13 +260,15 @@ const Categories = () => {
             </p>
           </div>
           <div data-aos ='fade-up' className="flex flex-wrap justify-center items-center gap-8 py-12">
-            <div data-aos ='fade-up' className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
-              <img data-aos ='fade-up'
+            <div data-aos ="fade-up">
+            <div className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
+              <div data-aos ="fade-up">
+              <img
                 className="h-[250px] object-cover rounded-md hover:scale-105 transition duration-500"
                 src="/assets/classicsneakers.png"
                 width={250}
                 alt="Classic Sneakers"
-              />
+              /></div>
               <p data-aos ='fade-up' className=" text-center text-lg py-2 font-bold">
                 Classic Sneakers
               </p>
@@ -253,13 +278,16 @@ const Categories = () => {
                 </button>
               </div>
             </div>
-            <div data-aos ='fade-up' className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
-              <img data-aos ='fade-up'
+            </div>
+            <div data-aos ="fade-up">
+            <div className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
+             <div data-aos ="fade-up">
+              <img
                 className="h-[250px] object-cover rounded-md hover:scale-105 transition duration-500"
                 src="/assets/slipOnsSneakers.png"
                 width={250}
                 alt="Slip-Ons Sneakers"
-              />
+              /></div>
               <p data-aos ='fade-up' className=" text-center text-lg py-2 font-bold">
                 Slip-Ons
               </p>
@@ -269,13 +297,16 @@ const Categories = () => {
                 </button>
               </div>
             </div>
-            <div data-aos ='fade-up' className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
-              <img data-aos ='fade-up'
+            </div>
+            <div data-aos ="fade-up">
+            <div className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
+              <div data-aos ="fade-up">
+              <img
                 className="h-[250px] object-cover rounded-md hover:scale-105 transition duration-500"
                 src="/assets/highTopsSneakers.png"
                 width={250}
                 alt="High Top Sneakers"
-              />
+              /></div>
               <p data-aos ='fade-up' className=" text-center text-lg py-2 font-bold">
               High-Tops
               </p>
@@ -285,13 +316,16 @@ const Categories = () => {
                 </button>
               </div>
             </div>
-            <div data-aos ='fade-up' className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
-              <img data-aos ='fade-up'
+            </div>
+            <div data-aos ="fade-up">
+            <div className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
+              <div data-aos ="fade-up">
+              <img
                 className="h-[250px] object-cover rounded-md hover:scale-105 transition duration-500"
                 src="/assets/platformSneakers.png"
                 width={250}
                 alt="Platform Sneakers"
-              />
+              /></div>
               <p data-aos ='fade-up' className=" text-center text-lg py-2 font-bold">
               Platform Sneakers
               </p>
@@ -301,6 +335,7 @@ const Categories = () => {
                 </button>
               </div>
             </div>
+            </div>
           </div>
         </div>
 
@@ -308,7 +343,7 @@ const Categories = () => {
 
         <div data-aos ='fade-up' className=" py-12 ">
           <div data-aos ='fade-up' className="max-w-[800px] mx-auto px-6 ">
-            <h3 data-aos ='fade-up' className="font-bold text-center text-xl md:text-3xl  ">
+            <h3 id="Formal" data-aos ='fade-up' className="font-bold text-center text-xl md:text-3xl  ">
               Formal & Dress Shoes
             </h3>
             <p data-aos ='fade-up' className="text-[16px] text-center px-2 py-2  ">
@@ -316,13 +351,16 @@ const Categories = () => {
             </p>
           </div>
           <div data-aos ='fade-up' className="flex flex-wrap justify-center items-center gap-8 py-12">
-            <div data-aos ='fade-up' className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
-              <img data-aos ='fade-up'
+            
+            <div data-aos ="fade-up">
+            <div className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
+              <div data-aos ="fade-up">
+              <img
                 className="h-[250px] object-cover rounded-md hover:scale-105 transition duration-500"
                 src="/assets/oxfordShoe.png"
                 width={250}
                 alt="Oxfords Shoes"
-              />
+              /></div>
               <p data-aos ='fade-up' className=" text-center text-lg py-2 font-bold">
                 Oxfords
               </p>
@@ -332,13 +370,16 @@ const Categories = () => {
                 </button>
               </div>
             </div>
-            <div data-aos ='fade-up' className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
-              <img data-aos ='fade-up'
+            </div>
+            <div data-aos ="fade-up">
+            <div className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
+              <div data-aos ="fade-up">
+              <img
                 className="h-[250px] object-cover rounded-md hover:scale-105 transition duration-500"
                 src="/assets/loafersShoe.png"
                 width={250}
                 alt="Loafers"
-              />
+              /></div>
               <p data-aos ='fade-up' className=" text-center text-lg py-2 font-bold">
               Loafers
               </p>
@@ -348,13 +389,16 @@ const Categories = () => {
                 </button>
               </div>
             </div>
-            <div data-aos ='fade-up' className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
-              <img data-aos ='fade-up'
+            </div>
+            <div data-aos ="fade-up">
+            <div className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
+              <div data-aos ="fade-up">
+              <img
                 className="h-[250px] object-cover rounded-md hover:scale-105 transition duration-500"
                 src="/assets/derbiesShoe.png"
                 width={250}
                 alt="Derby Shoes"
-              />
+              /></div>
               <p data-aos ='fade-up' className=" text-center text-lg py-2 font-bold">
               Derbies
               </p>
@@ -364,13 +408,16 @@ const Categories = () => {
                 </button>
               </div>
             </div>
-            <div data-aos ='fade-up' className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
-              <img data-aos ='fade-up'
+            </div>
+            <div data-aos ="fade-up">
+            <div className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
+              <div data-aos ="fade-up">
+              <img
                 className="h-[250px] object-cover rounded-md hover:scale-105 transition duration-500"
                 src="/assets/monkStrapsShoe.png"
                 width={250}
                 alt="Monk Straps Shoes"
-              />
+              /></div>
               <p data-aos ='fade-up' className=" text-center text-lg py-2 font-bold">
               Monk Straps
               </p>
@@ -380,6 +427,7 @@ const Categories = () => {
                 </button>
               </div>
             </div>
+            </div>
           </div>
         </div>
 
@@ -387,7 +435,7 @@ const Categories = () => {
 
         <div data-aos ='fade-up' className=" py-12 ">
           <div data-aos ='fade-up' className="max-w-[800px] mx-auto px-6 ">
-            <h3 data-aos ='fade-up' className="font-bold text-center text-xl md:text-3xl  ">
+            <h3 id="Seasonal" data-aos ='fade-up' className="font-bold text-center text-xl md:text-3xl  ">
             Seasonal & Specialty Shoe
             </h3>
             <p data-aos ='fade-up' className="text-[16px] text-center px-2 py-2  ">
@@ -395,13 +443,16 @@ const Categories = () => {
             </p>
           </div>
           <div data-aos ='fade-up' className="flex flex-wrap justify-center items-center gap-8 py-12">
-            <div data-aos ='fade-up' className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
-              <img data-aos ='fade-up'
+
+            <div data-aos ="fade-up">
+            <div className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
+              <div data-aos ="fade-up">
+              <img
                 className="h-[250px] object-cover rounded-md hover:scale-105 transition duration-500"
                 src="/assets/winterBoots.png"
                 width={250}
                 alt="Winter Boots"
-              />
+              /></div>
               <p data-aos ='fade-up' className=" text-center text-lg py-2 font-bold">
                 Winter Boots
               </p>
@@ -410,14 +461,16 @@ const Categories = () => {
                   View details
                 </button>
               </div>
-            </div>
-            <div data-aos ='fade-up' className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
-              <img data-aos ='fade-up'
+            </div></div>
+            <div data-aos ="fade-up">
+            <div className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
+              <div data-aos ="fade-up">
+              <img
                 className="h-[250px] object-cover rounded-md hover:scale-105 transition duration-500"
                 src="/assets/summerSandals.png"
                 width={250}
                 alt="Summer Sandals"
-              />
+              /></div>
               <p data-aos ='fade-up' className=" text-center text-lg py-2 font-bold">
               Summer Sandals
               </p>
@@ -426,14 +479,16 @@ const Categories = () => {
                   View details
                 </button>
               </div>
-            </div>
-            <div data-aos ='fade-up' className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
-              <img data-aos ='fade-up'
+            </div></div>
+            <div data-aos ="fade-up">
+            <div className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
+              <div data-aos ="fade-up">
+              <img
                 className="h-[250px] object-cover rounded-md hover:scale-105 transition duration-500"
                 src="/assets/rainBoots.png"
                 width={250}
                 alt="Rain boots"
-              />
+              /></div>
               <p data-aos ='fade-up' className=" text-center text-lg py-2 font-bold">
               Rain Boots
               </p>
@@ -442,14 +497,16 @@ const Categories = () => {
                   View details
                 </button>
               </div>
-            </div>
-            <div data-aos ='fade-up' className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
-              <img data-aos ='fade-up'
+            </div></div>
+            <div data-aos ="fade-up">
+            <div className="max-w-[500px] px-6 py-4 rounded-md bg-[#F1F3F5] border border-[#E0E0E0] hover:!border-[#FF6347] transition duration-500">
+              <div data-aos ="fade-up">
+              <img
                 className="h-[250px] object-cover rounded-md hover:scale-105 transition duration-500"
                 src="/assets/ecoFriendly.png"
                 width={250}
                 alt="Eco-friendly Shoes"
-              />
+              /></div>
               <p data-aos ='fade-up' className=" text-center text-lg py-2 font-bold">
               Eco-Friendly Shoes
               </p>
@@ -458,9 +515,10 @@ const Categories = () => {
                   View detials
                 </button>
               </div>
-            </div>
+            </div></div>
           </div>
         </div>
+        
 
       </section>
 

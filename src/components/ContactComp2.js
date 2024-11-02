@@ -12,9 +12,7 @@ const ContactD = () => {
           We’d Love to Hear from You
         </h2>
         <p data-aos="fade-up" className="text-lg md:text-center px-6 max-w-[800px] mx-auto">
-          Whether you have a question about our inventory, want to schedule a
-          test drive, or need assistance with financing, our team is here to
-          help. Fill out the form below, and we’ll respond promptly.
+        Whether you have a question about our products, need help with an order, or want guidance on finding the perfect item, our team is here to assist. Fill out the form below, and we’ll get back to you as soon as possible.
         </p>
       </div>
 

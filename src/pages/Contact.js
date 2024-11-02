@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import ContactHero from "../components/ContactHero";
 import ContactComp2 from "../components/ContactComp2";
+import SalesComponent from "../components/SalesComponent";
 import { Helmet } from "react-helmet";
 
 const Contact = () => {
@@ -17,6 +18,8 @@ const Contact = () => {
       <ContactHero />
 
       <ContactComp2 />
+
+      <SalesComponent />
     </>
   );
 };

@@ -12,6 +12,8 @@ const HomeHero = () => {
       window.scrollTo({ top: elementPosition, behavior: "smooth" });
     }
   };
+
+  
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
@@ -50,7 +52,7 @@ const HomeHero = () => {
                 className="flex justify-center items-center "
               >
                 <button onClick={() => scrollToCategory("Sales")} className="font-bold text-white px-6 py-2 rounded-md bg-[#ff6347] hover:bg-[#E5533D] transition duration-500 ">
-                  Exclosive Sales
+                  Exclusive Sales
                 </button>
               </div>
             </div>

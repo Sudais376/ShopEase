@@ -1,12 +1,24 @@
-import React from 'react'
-import ContactHero from '../components/ContactHero'
+import React, { useEffect } from "react";
+import ContactHero from "../components/ContactHero";
+import ContactComp2 from "../components/ContactComp2";
+import { Helmet } from "react-helmet";
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
-    <ContactHero />
-    </>
-  )
-}
+      <Helmet>
+        <title>Contact - Shop Ease</title>
+      </Helmet>
 
-export default Contact
+      <ContactHero />
+
+      <ContactComp2 />
+    </>
+  );
+};
+
+export default Contact;

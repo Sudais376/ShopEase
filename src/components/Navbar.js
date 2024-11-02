@@ -84,12 +84,6 @@ const Navbar = () => {
               </li>
             </Link>
             <hr data-aos ="fade-down" className="border-t-2 border-[#ff6347] pb-4" />
-            <Link to="/shop">
-              <li data-aos ="fade-down" onClick={toggleNavbar} className="text-[#333333] text-lg hover:!text-[#FF6347] hover:underline transition duration-500">
-                Shop
-              </li>
-            </Link>
-            <hr data-aos ="fade-down" className="border-t-2 border-[#ff6347] pb-4" />
             <Link to="/categories">
               <li data-aos ="fade-down" onClick={toggleNavbar} className="text-[#333333] text-lg hover:!text-[#FF6347] hover:underline transition duration-500">
                 Categories
@@ -146,11 +140,6 @@ const Navbar = () => {
               <Link to="/">
                 <li className="text-[#333333] text-lg hover:!text-[#FF6347] hover:underline transition duration-500">
                   Home
-                </li>
-              </Link>
-              <Link to="/shop">
-                <li className="text-[#333333] text-lg hover:!text-[#FF6347] hover:underline transition duration-500">
-                  Shop
                 </li>
               </Link>
               <Link to="/categories">

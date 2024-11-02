@@ -10,7 +10,7 @@ const Footer = () => {
 
   return (
     <>
-      <section className="py-12 bg-[#333333] max-w-[1800px] mx-auto">
+      <section className="py-12 bg-[#333333] max-w-[2400px] mx-auto">
         <div
           data-aos=""
           className="flex flex-col lg:flex-row justify-around items-center gap-2"
@@ -35,12 +35,6 @@ const Footer = () => {
                   className="text-lg text-white hover:!text-[#FF6347] transition duration-500"
                 >
                   Home
-                </Link>
-                <Link
-                  to="/shop"
-                  className="text-lg text-white hover:!text-[#FF6347] transition duration-500"
-                >
-                  Shop
                 </Link>
                 <Link
                   to="/categories"
@@ -82,6 +76,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        <div className="pt-4 text-center px-2 text-white">&copy; Copy Right 2024 | Built with Love by CodeBloom Developer</div>
       </section>
     </>
   );

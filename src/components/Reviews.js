@@ -10,7 +10,7 @@ const Reviews = () => {
     
       return (
         <>
-          <section data-aos ="fade-up" className="py-12 max-w-[1800px] mx-auto bg-[#F8F9FA] px-6 ">
+          <section data-aos ="fade-up" className="py-12 max-w-[2400px] mx-auto bg-[#F8F9FA] px-6 ">
 
         <div data-aos ="fade-up" className="max-w-[800px] mx-auto py-12">
           <h2 data-aos ="fade-up" className="text-center font-bold text-[#1B1F3B] text-xl md:text-2xl pb-4">What our Customers Are Saying</h2>

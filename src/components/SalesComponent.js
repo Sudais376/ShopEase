@@ -90,7 +90,7 @@ const Sales = () => {
                 <img className=" h-[250px] object-cover rounded-md hover:scale-105 transition duration-500" src="/assets/runningshoe.png" width={250} alt="" />
               </div>
               <div>
-                <p data-aos ="fade-up" className="text-center text-[#333333] text-lg md:text-xl">Summer Sandals</p>
+                <p data-aos ="fade-up" className="text-center text-[#333333] text-lg md:text-xl">Running Shoes</p>
                 <p data-aos ="fade-up" className="text-center font-bold text-[#ff6347] text-xl md:text-2xl"> <span className=" line-through text-black font-normal pr-2 ">60$</span>  45$ Only</p>
               </div>
               
